@@ -25,7 +25,7 @@ from selfdrive.controls.lib.longitudinal_planner import LON_MPC_STEP
 from selfdrive.locationd.calibrationd import Calibration
 from selfdrive.hardware import HARDWARE, TICI
 from selfdrive.car.hyundai.scc_smoother import SccSmoother
-from selfdrive.ntune import ntune_get, ntune_isEnabled
+#from selfdrive.ntune import ntune_get, ntune_isEnabled
 
 LDW_MIN_SPEED = 31 * CV.MPH_TO_MS
 LANE_DEPARTURE_THRESHOLD = 0.1
@@ -444,12 +444,12 @@ class Controls:
     x = max(params.stiffnessFactor, 0.1)
     #sr = max(params.steerRatio, 0.1)
 
-    if ntune_isEnabled('useLiveSteerRatio'):
-      sr = max(params.steerRatio, 0.1)
-    else:
-      sr = max(ntune_get('steerRatio'), 0.1)
+#    if ntune_isEnabled('useLiveSteerRatio'):
+#      sr = max(params.steerRatio, 0.1)
+#    else:
+#      sr = max(ntune_get('steerRatio'), 0.1)
 
-    self.VM.update_params(x, sr)
+    self.VM.update_params(0.9, 14.4) #x, sr)
 
     lat_plan = self.sm['lateralPlan']
     long_plan = self.sm['longitudinalPlan']
@@ -546,7 +546,7 @@ class Controls:
     if len(meta.desirePrediction) and ldw_allowed:
       l_lane_change_prob = meta.desirePrediction[Desire.laneChangeLeft - 1]
       r_lane_change_prob = meta.desirePrediction[Desire.laneChangeRight - 1]
-      cameraOffset = ntune_get("cameraOffset")
+      cameraOffset = 0.06 #ntune_get("cameraOffset")
       l_lane_close = left_lane_visible and (self.sm['modelV2'].laneLines[1].y[0] > -(1.08 + cameraOffset))
       r_lane_close = right_lane_visible and (self.sm['modelV2'].laneLines[2].y[0] < (1.08 - cameraOffset))
 
@@ -621,9 +621,9 @@ class Controls:
     controlsState.aReqValueMin = self.aReqValueMin
     controlsState.aReqValueMax = self.aReqValueMax
 
-    controlsState.steerRatio = self.VM.sR
-    controlsState.steerRateCost = ntune_get('steerRateCost')
-    controlsState.steerActuatorDelay = ntune_get('steerActuatorDelay')
+    controlsState.steerRatio = 14.4 #self.VM.sR
+    controlsState.steerRateCost = 1.5 #ntune_get('steerRateCost')
+    controlsState.steerActuatorDelay = 0.1  #ntune_get('steerActuatorDelay')
 
     if self.CP.steerControlType == car.CarParams.SteerControlType.angle:
       controlsState.lateralControlState.angleState = lac_log
