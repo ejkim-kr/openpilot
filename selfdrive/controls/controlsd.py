@@ -449,7 +449,7 @@ class Controls:
 #    else:
 #      sr = max(ntune_get('steerRatio'), 0.1)
 
-    self.VM.update_params(0.9, 14.4) #x, sr)
+    #self.VM.update_params(0.9, 14.4) #x, sr)
 
     lat_plan = self.sm['lateralPlan']
     long_plan = self.sm['longitudinalPlan']
@@ -621,9 +621,9 @@ class Controls:
     controlsState.aReqValueMin = self.aReqValueMin
     controlsState.aReqValueMax = self.aReqValueMax
 
-    controlsState.steerRatio = 14.4 #self.VM.sR
-    controlsState.steerRateCost = 1.5 #ntune_get('steerRateCost')
-    controlsState.steerActuatorDelay = 0.1  #ntune_get('steerActuatorDelay')
+    #controlsState.steerRatio = 14.4 #self.VM.sR
+    #controlsState.steerRateCost = 1.3 #ntune_get('steerRateCost')
+    #controlsState.steerActuatorDelay = 0.1  #ntune_get('steerActuatorDelay')
 
     if self.CP.steerControlType == car.CarParams.SteerControlType.angle:
       controlsState.lateralControlState.angleState = lac_log
