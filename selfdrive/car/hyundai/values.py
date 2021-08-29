@@ -159,49 +159,7 @@ FEATURES = {
 }
 
 DBC = {
-  # genesis
-  CAR.GENESIS: dbc_dict('hyundai_kia_generic', None),
-  CAR.GENESIS_G70: dbc_dict('hyundai_kia_generic', None),  
-  CAR.GENESIS_G80: dbc_dict('hyundai_kia_generic', None),
-  CAR.GENESIS_EQ900: dbc_dict('hyundai_kia_generic', None),
-  CAR.GENESIS_EQ900_L: dbc_dict('hyundai_kia_generic', None),
-  CAR.GENESIS_G90: dbc_dict('hyundai_kia_generic', None),
-  # hyundai
-  CAR.ELANTRA: dbc_dict('hyundai_kia_generic', None),
-  CAR.ELANTRA_2021: dbc_dict('hyundai_kia_generic', None),
-  CAR.ELANTRA_GT_I30: dbc_dict('hyundai_kia_generic', None),
-  CAR.SONATA: dbc_dict('hyundai_kia_generic', None),
-  CAR.SONATA_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.SONATA19: dbc_dict('hyundai_kia_generic', None),
-  CAR.SONATA19_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.SONATA_LF_TURBO: dbc_dict('hyundai_kia_generic', None),
-  CAR.KONA: dbc_dict('hyundai_kia_generic', None),
-  CAR.KONA_EV: dbc_dict('hyundai_kia_generic', None),
-  CAR.KONA_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.IONIQ: dbc_dict('hyundai_kia_generic', None),
-  CAR.IONIQ_EV_LTD: dbc_dict('hyundai_kia_generic', None),
-  CAR.SANTA_FE: dbc_dict('hyundai_kia_generic', None),
-  CAR.PALISADE: dbc_dict('hyundai_kia_generic', None),
-  CAR.VELOSTER: dbc_dict('hyundai_kia_generic', None),
-  CAR.GRANDEUR_IG: dbc_dict('hyundai_kia_generic', None),
-  CAR.GRANDEUR_IG_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.GRANDEUR_IG_FL: dbc_dict('hyundai_kia_generic', None),
-  CAR.GRANDEUR_IG_FL_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.TUCSON_TL_SCC: dbc_dict('hyundai_kia_generic', None),
-  # kia
-  CAR.FORTE: dbc_dict('hyundai_kia_generic', None),
-  CAR.K5: dbc_dict('hyundai_kia_generic', None),
-  CAR.K5_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.SPORTAGE: dbc_dict('hyundai_kia_generic', None),  
-  CAR.SORENTO: dbc_dict('hyundai_kia_generic', None),
-  CAR.STINGER: dbc_dict('hyundai_kia_generic', None),  
   CAR.NIRO_EV: dbc_dict('hyundai_kia_generic', None),
-  CAR.NIRO_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.CEED: dbc_dict('hyundai_kia_generic', None),
-  CAR.SELTOS: dbc_dict('hyundai_kia_generic', None),
-  CAR.K7: dbc_dict('hyundai_kia_generic', None),
-  CAR.K7_HEV: dbc_dict('hyundai_kia_generic', None),
-  CAR.K9: dbc_dict('hyundai_kia_generic', None),
 }
 
 STEER_THRESHOLD = 150
