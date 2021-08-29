@@ -52,9 +52,9 @@ class CarInterface(CarInterfaceBase):
     ret.mass = 1737. + STD_CARGO_KG
     ret.wheelbase = 2.7
 
-    tire_stiffness_factor = 0.9 #0.95 #반비례
-    ret.steerActuatorDelay = 0.2
-    ret.steerRateCost = 1.0
+    tire_stiffness_factor = 0.9 #0.95 #諛섎퉬濡
+    ret.steerActuatorDelay = 0.2 #0.1
+    ret.steerRateCost = 1.0 #1.3
     ret.steerLimitTimer = 0.1 #0.3
     ret.steerRatio = 14.4
       
